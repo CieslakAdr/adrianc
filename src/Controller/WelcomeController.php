@@ -5,6 +5,8 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+
+
 class WelcomeController extends AbstractController
 {
     /**
@@ -18,7 +20,6 @@ class WelcomeController extends AbstractController
     }
 
 
-
 }
 
 ?>
@@ -26,14 +27,15 @@ class WelcomeController extends AbstractController
 
 
 <?php
+echo "<center>";
 $l1=0;
 $l2=0;
 $l3=0;
 $l4=0;
-$l1= $_POST['liczba1'];
-$l2 = $_POST['liczba2'];
-$l3 = $_POST['liczba3'];
-$l4 = $_POST['liczba4'];
+$l1= $_GET['l1'];
+$l2 = $_GET['l2'];
+$l3 = $_GET['l3'];
+$l4 = $_GET['l4'];
 
 function licz($liczba)
 {
@@ -77,15 +79,16 @@ function licz($liczba)
 }
 
 
-echo "<table><tr><th>INPUT</th><th>OUTPUT</th></tr>";
+echo "<table><tr><th>INPUT</th><th>OUTPUT (max liczba z ciągu)</th></tr>";
 licz($l1);
 licz($l2);
 licz($l3);
 licz($l4);
 echo "</table>";
+echo "</br>";
 
 
 
 
-
+echo "</center>";
 ?>
